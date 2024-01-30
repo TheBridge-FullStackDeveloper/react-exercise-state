@@ -9,3 +9,9 @@ body {
 .taskDone {
   text-decoration: line-through;
 }
+
+.x {
+  border: none;
+  background-color: aquamarine;
+  cursor: pointer;
+}

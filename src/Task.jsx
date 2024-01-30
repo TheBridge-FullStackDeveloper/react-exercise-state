@@ -1,19 +1,31 @@
-import { useState } from "react";
-
-export function Task({ singleTask }) {
-  const [done, setDone] = useState(singleTask.isDone);
+export function Task({ singleTask, setTasks, index }) {
   return (
     <div style={{ display: "flex" }}>
-      <p className={done ? "taskDone" : "taskNotDone"}>
+      <p className={singleTask.isDone ? "taskDone" : "taskNotDone"}>
         {singleTask.description}
       </p>
+
       <input
         type="radio"
-        onChange={(e) => {
-          console.log("target value ", e.target.value);
-          setDone(true);
+        onChange={() => {
+          setTasks((prev) =>
+            prev.map((task, i) =>
+              i === index ? { ...task, isDone: !task.isDone } : task
+            )
+          );
         }}
       />
+
+      <button
+        className="x"
+        onClick={() => {
+          setTasks((prev) =>
+            prev.filter((task) => task._id !== singleTask._id)
+          );
+        }}
+      >
+        x
+      </button>
     </div>
   );
 }

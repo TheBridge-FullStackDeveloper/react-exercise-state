@@ -26,7 +26,7 @@ export function App() {
                 _id: tasks.length + 1,
               },
             ]);
-            setInput(""); // Clear input field
+            setInput("");
           }
         }}
         placeholder="Add TO DO"
@@ -46,7 +46,7 @@ export function App() {
                 _id: tasks.length + 1,
               },
             ]);
-            setInput(""); // Clear input field
+            setInput("");
           }}
         >
           Add the task
@@ -54,9 +54,14 @@ export function App() {
       </div>
 
       <div>
-        {tasks.map((singleTask, index) => {
-          return <Task key={index} singleTask={singleTask} />;
-        })}
+        {tasks.map((singleTask, index) => (
+          <Task
+            key={index}
+            singleTask={singleTask}
+            setTasks={setTasks}
+            index={index}
+          />
+        ))}
       </div>
     </>
   );
