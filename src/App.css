@@ -1,0 +1,50 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  margin: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+input {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 5px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #fff;
+  padding: 10px;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+span {
+  margin-right: 10px;
+}
+
+span:last-child {
+  color: red;
+}
+
+span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
