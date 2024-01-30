@@ -1,0 +1,11 @@
+body {
+  background-color: aquamarine;
+}
+
+.taskNotDone {
+  text-decoration: none;
+}
+
+.taskDone {
+  text-decoration: line-through;
+}
