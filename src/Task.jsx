@@ -1,17 +1,22 @@
 export function Task({ singleTask, setTasks, index }) {
   return (
     <div style={{ display: "flex" }}>
-      <p className={singleTask.isDone ? "taskDone" : "taskNotDone"}>
+      <div className={singleTask.isDone ? "taskDone" : "taskNotDone"}>
         {singleTask.description}
-      </p>
+      </div>
 
       <input
         type="radio"
         onChange={() => {
           setTasks((prev) =>
-            prev.map((task, i) =>
-              i === index ? { ...task, isDone: !task.isDone } : task
-            )
+            prev.map((task, i) => {
+              if (i === index) {
+                //The if (i === index) statement checks if the current index (i) matches the index you want to target.
+                return { ...task, isDone: true };
+              } else {
+                return task;
+              }
+            })
           );
         }}
       />
@@ -19,8 +24,9 @@ export function Task({ singleTask, setTasks, index }) {
       <button
         className="x"
         onClick={() => {
-          setTasks((prev) =>
-            prev.filter((task) => task._id !== singleTask._id)
+          setTasks(
+            (prev) => prev.filter((task) => task._id !== singleTask._id)
+            //This callback function filters out the tasks that have the same _id as the singleTask being deleted
           );
         }}
       >
