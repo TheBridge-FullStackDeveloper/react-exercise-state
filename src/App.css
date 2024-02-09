@@ -1,0 +1,23 @@
+.main, .main *{
+  /* border: 0.5px solid white; */
+
+  border-radius: 4px;
+
+}
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  /* background-color: #232424; */
+  background-image: radial-gradient(circle, #21202b, #1c1c21, #151516);
+  border-radius: 10px;
+  min-height: 80%;
+  min-width: 600px;
+  
+  margin-bottom: 5rem;
+  padding-bottom: 5rem;
+}
+
