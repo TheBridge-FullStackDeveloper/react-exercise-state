@@ -1,0 +1,24 @@
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1rem;
+  font-size: 4rem;
+  width: 450px;
+  color: #b3baf5;
+
+  background: linear-gradient(45deg, #b3baf5, #6369a0, #573e3e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  svg {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+}
